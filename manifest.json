@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "discopfp",
+    "version": "1.0",
+    "description": "Preview Discord profile pictures in various resolutions.",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "host_permissions": ["*://discord.com/*"],
+    "action": {
+      "default_title": "click to activate"
+    },
+    "background": {
+      "service_worker": "src/js/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://discord.com/*"],
+        "js": ["src/js/content.js"],
+        "css": ["src/css/styles.css"]
+      }
+    ],
+    "icons": {
+      "128": "icons/icon.jpg"
+    }
+  }
+  
