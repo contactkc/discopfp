@@ -6,20 +6,13 @@
     "permissions": ["scripting", "activeTab", "storage"],
     "host_permissions": ["*://discord.com/*"],
     "action": {
-      "default_title": "click to activate"
+      "default_title": "discopfp"
     },
     "background": {
       "service_worker": "src/js/background.js"
     },
-    "content_scripts": [
-      {
-        "matches": ["*://discord.com/*"],
-        "js": ["src/js/content.js"],
-        "css": ["src/css/styles.css"]
-      }
-    ],
     "icons": {
-      "128": "icons/icon.jpg"
+      "128": "src/icons/icon.jpg"
     }
   }
   
